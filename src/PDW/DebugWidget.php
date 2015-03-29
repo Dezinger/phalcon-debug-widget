@@ -146,21 +146,21 @@ class DebugWidget implements \Phalcon\DI\InjectionAwareInterface
 		$url = $this->getDI()->get('url');
 		$scripts = "";
 
-		$css = array('/pdw-assets/style.css', '/pdw-assets/lib/prism/prism.css');
+		$css = array('pdw-assets/style.css', 'pdw-assets/lib/prism/prism.css');
 		foreach ($css as $src) {
 			$link = $url->get($src);
-			$link = str_replace("//", "/", $link);
+			//$link = str_replace("//", "/", $link);
 			$scripts .= "<link rel='stylesheet' type='text/css' href='" . $escaper->escapeHtmlAttr($link) . "' />";
 		}
 
 		$js = array(
-				'/pdw-assets/jquery.min.js',
-				'/pdw-assets/lib/prism/prism.js',
-				'/pdw-assets/pdw.js'
+				'pdw-assets/jquery.min.js',
+				'pdw-assets/lib/prism/prism.js',
+				'pdw-assets/pdw.js'
 		);
 		foreach ($js as $src) {
 			$link = $url->get($src);
-			$link = str_replace("//", "/", $link);
+			//$link = str_replace("//", "/", $link);
 			$scripts .= "<script tyle='text/javascript' src='" . $escaper->escapeHtmlAttr($link) . "'></script>";
 		}
 
