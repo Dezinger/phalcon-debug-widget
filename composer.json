@@ -1,0 +1,14 @@
+{
+    "name": "dezinger/phalcon-debug-widget",
+    "description": "Phalcon debug toolbar",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+	    "PDW": "src/"
+        }
+    }
+}
